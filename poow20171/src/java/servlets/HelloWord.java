@@ -43,16 +43,17 @@ public class HelloWord extends HttpServlet {
                     "Bem vindo," + nome + "</h1>");
             out.println("</head>");
             out.println("<body>");
-            if (nome.equals("elton") && senha.equals("teste"))
+            if (nome.equals("elton") && senha.equals("teste")){
                 response.sendRedirect("principal.jsp");
             out.println("<h1>Servlet HelloWord  " +
                     "Bem vindo,  "+ nome + "</h1>");
-            }else{   
+        }else{   
                  out.println("<h3>Usuario ou senha incorretos </h3>");
             }
                  out.println("</body>");
                  out.println("</html>");
         }
+    }
     
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
