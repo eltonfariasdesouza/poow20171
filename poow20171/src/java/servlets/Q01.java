@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Laboratorio
  */
-@WebServlet(name = "HelloWord", urlPatterns = {"/helloword"})
-public class HelloWord extends HttpServlet {
+@WebServlet(name = "Q01", urlPatterns = {"/q01"})
+public class Q01 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,34 +29,22 @@ public class HelloWord extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request,
-            HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nome = request.getParameter("nome");
-        String senha = request.getParameter("senha"); 
-        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HelloWord" +
-                    "Bem vindo," + nome + "</h1>");
+            out.println("<title>Servlet Q01</title>");            
             out.println("</head>");
             out.println("<body>");
-            if (nome.equals("elton") && senha.equals("teste")){
-                response.sendRedirect("principal.jsp");
-            out.println("<h1>Servlet HelloWord  " +
-                    "Bem vindo,  "+ nome + "</h1>");
-        }else{   
-                 out.println("<h3>Usuario ou senha incorretos </h3>");
-            }
-                 out.println("</body>");
-                 out.println("</html>");
+            out.println("<h1>Servlet Q01 at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -1,10 +1,9 @@
 <%-- 
-    Document   : principal
-    Created on : 23/02/2017, 22:34:56
+    Document   : Q01
+    Created on : 09/03/2017, 21:43:49
     Author     : Laboratorio
 --%>
 
-<%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,10 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <%--EXPRESSION--%>
-        <br>
-        Data: <%= (new Date ()).toLocaleString() %>
-   
+        <h1>Questão 1</h1>
+        <form action="questao" method="Post">
+            <input type="text" name="numero"/>
+            <input type="submit" value="Enviar"/>
+        </form>
     </body>
 </html>
